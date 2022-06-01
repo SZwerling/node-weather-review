@@ -19,3 +19,4 @@ const geocode = (address, callback) => {
 
 
 module.exports = geocode
+// mapbox // access_token=pk.eyJ1Ijoic2xpbWJpZ2d5IiwiYSI6ImNrbXFvcjd2azAwMDgybm50eXJocWR4cWsifQ.VzNz24swKwxCgnHWDoZGsw
