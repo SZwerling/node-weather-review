@@ -8,14 +8,14 @@ const forecast = (latitude, longitude, callback) => {
       longitude +
       "&units=f";
 
-   request({ url: url, json: true }, (error, response) => {
+   request({ url, json: true }, (error, {body} ) => {
       if (error) {
          //for complete lack of response
          callback("Cannot reach forecast api.", undefined);
-      } else if (response.body.error) {
+      } else if (body.error) {
          callback("Unable to find location.", undefined);
       } else {
-         callback(undefined, `It is currently ${response.body.current.temperature} degrees`);
+         callback(undefined, `It is currently ${body.current.temperature} degrees`);
       }
    });
 };
